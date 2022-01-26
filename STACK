@@ -1,0 +1,30 @@
+tumpukan paket;
+
+impor java.lang.reflect.Array;
+
+tumpukan kelas publik{
+  array T[] publik;
+  penunjuk int publik;
+  public Stack(Nama kelas kelas){
+  array=(T[]) Array.newInstance(nama kelas, 10);
+
+  penunjuk = -1;
+  }
+
+  public void push(T item){
+  array[++pointer]=item;
+  }
+  publik T pop(){
+  kembali array[pointer--];
+  }
+
+  public static void main(String[] args){
+  Stacka = Tumpukan baru(Integer.kelas);
+  a.push(5);
+  a.push(6);
+  a.push(7);
+
+  System.out.println(a.pop());
+  System.out.println(a.pop());
+  }
+}
