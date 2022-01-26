@@ -1,0 +1,96 @@
+IsEmpty   : Petugas tiket Kereta Api melihat tidak ada lagi yang ingin membeli tiket kereta.
+IsFull        : Petugas Tiket Kereta Api melihat masih ada pembeli tiket kereta.
+Untuk contoh programnya adalah sebagai berikut :
+antrian paket;
+
+impor java.lang.reflect.Array;
+impor java.util.Scanner;
+Antrian kelas publik{
+    penunjuk bilangan bulat publik;
+    ukuran Integer final pribadiArray;
+    elemen T[] akhir pribadi;
+
+    public Queue(Class namaClass, Integer size) {
+        pointer = -1;
+        ukuranArray = ukuran;
+        elemen = (T[]) Array.newInstance(namaClass, ukuran);
+    }
+
+    public void enqueue(T data)
+    {
+        if(pointer < (sizeArray - 1))
+        {
+            pointer++;
+            elemen[penunjuk] = data;
+        }
+        else
+        {
+            System.out.println("Antrian Sudah Penuh");
+        }
+    }
+
+    public void dequeue()
+    {
+        if(pointer >= 0) {
+            for (Integer i = 0; i <= pointer; i++) {
+                elemen[i] = elemen[i + 1];
+            }
+            penunjuk--;
+        }
+        else
+        {
+            System.out.println("Antrian Sudah Kosong");
+        }
+    }
+    public void viewQueue()
+    {
+        for(Integer i = 0; i <= pointer; i++)
+        {
+            System.out.print(element[i]);
+            System.out.print(" ");
+        }
+    }
+
+    public void clearQueue()
+    {
+        pointer = -1;
+    }
+ 
+    public static void main(String[] args)
+    {
+        Bilangan bulat pil;
+        Antre antrian = Antrian baru<>(String.class, 10);
+        Pemindai pemindai = Pemindai baru (System.in);
+lakukan
+        {
+            antrian.viewQueue();
+            System.out.println();
+            System.out.println("1. Antrian");
+            System.out.println("2. Dequeue");
+            System.out.println("3. Hapus");
+            System.out.println("4.Keluar");
+            pil = pemindai.nextInt();
+            if(pil > 0 && pil < 4)
+            {
+                switch (pil) {
+                    case 1:
+                        String data;
+                        System.out.print("Masukkan Data : ");
+                        data = pemindai.berikutnya();
+                        antrian.enqueue(data);
+                        merusak;
+                    kasus 2:
+                        antrian.dequeue();
+                        merusak;
+                    kasus 3:
+                        antrian.clearQueue();
+                        merusak;
+                    default:
+                        istirahat;
+                }
+            }
+            lain
+                istirahat;
+        }sementara (benar);
+    }
+}
